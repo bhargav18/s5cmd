@@ -151,7 +151,7 @@ func (p *WorkerPool) runWorker(st *stats.Stats, idlingCounter *int32, id int) {
 	bkf := backoff.NewExponentialBackOff()
 	bkf.InitialInterval = time.Second
 	bkf.MaxInterval = time.Minute
-	bkf.Multiplier = 2
+	bkf.Multiplier = 1
 	bkf.MaxElapsedTime = 0
 	bkf.Reset()
 
